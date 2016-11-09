@@ -2,11 +2,6 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var request = require("request");
-
-var oauthSignature = require("oauth-signature");
-var n = require("nonce");
-var qs = require("querystring");
-var _ = require("lodash");
 var config = require("./config");//way to use local javascript file
 
 /* Function for yelp call
