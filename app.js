@@ -29,13 +29,20 @@ var yelp = new Yelp({
 });
 
 /* R O U T E S */
-
 app.get("/", function(req, res){
+	res.render("search");
+})
 
+
+app.get("/camps", function(req, res){
+	var query = {
+		term: 'campground',
+		location: 'Oakland'
+	}
 	// See http://www.yelp.com/developers/documentation/v2/search_api
-	yelp.search({ term: 'campground', location: 'Seattle' })
+	yelp.search(query)
 	.then(function (data) {
-	  res.render("index", {config: config, data: data});
+	  res.render("index", {config: config, data: data, query: query});
 	})
 	.catch(function (err) {
 	  console.error(err);

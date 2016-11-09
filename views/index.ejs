@@ -3,12 +3,12 @@
 <div class="container">
 	<header class="jumbotron">
 		<h1>Yelp Aggregator</h1>
-		<p>Collection of campsites in Seattle</p>
+		<p>Collection of campsites in <%= query.location %></p>
 	</header>
 
-	<div class="row text-center" style="display: flex; flex-wrap: wrap;" id="camps">
+	<div class="row text-center" id="camps">
 		<% data["businesses"].forEach(function(business){%>
-			<div class="col-sm-6 col-md-4">
+			<div class="col-xs-12 col-sm-6 col-md-4">
 				<div class="thumbnail">
 					<img src="<%= business["image_url"] %>" alt="<%= business["name"] %>" />
 					<div class="caption">
