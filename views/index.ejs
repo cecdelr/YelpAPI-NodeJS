@@ -1,0 +1,23 @@
+<% include partials/header %>
+
+<div class="container">
+	<header class="jumbotron">
+		<h1>Yelp Aggregator</h1>
+		<p>Collection of campsites in Seattle</p>
+	</header>
+
+	<div class="row text-center" style="display: flex; flex-wrap: wrap;" id="camps">
+		<% data["businesses"].forEach(function(business){%>
+			<div class="col-sm-6 col-md-4">
+				<div class="thumbnail">
+					<img src="<%= business["image_url"] %>" alt="<%= business["name"] %>" />
+					<div class="caption">
+						<strong><h3 class="businessName"><%= business["name"] %></h3></strong>
+					</div>
+				</div>
+			</div>
+		<%	}); %>
+	</div>
+</div>
+
+<% include partials/footer %>

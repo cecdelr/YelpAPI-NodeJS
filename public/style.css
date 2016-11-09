@@ -1,0 +1,13 @@
+#camps{
+	display: flex; 
+	flex-wrap: wrap;
+	/*Safari*/
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;   
+    flex-wrap: wrap;
+}
+
+.thumbnail{
+	padding-top: 10px;
+}
