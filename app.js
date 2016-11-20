@@ -30,9 +30,12 @@ app.get("/", function(req, res){
 
 
 app.get("/camps", function(req, res){
+	var term = req.query.term; //from /
+	var location = req.query.location;
+
 	var query = {
-		term: 'campground',
-		location: 'Oakland'
+		term: term,
+		location: location
 	}
 	// See http://www.yelp.com/developers/documentation/v2/search_api
 	yelp.search(query)
