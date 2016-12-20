@@ -2,8 +2,8 @@
 
 <div class="container">
 	<header class="jumbotron">
-		<h1>Yelp Aggregator</h1>
-		<p>Collection of "<%= query.term %>" locations in <%= query.location %></p>
+		<h1>Results for "<%= query.term %>"</h1>
+		<p class="lead">Located in <%= query.location %></p>
 	</header>
 
 	<div class="row text-center" id="camps">
@@ -13,7 +13,9 @@
 					<img src="<%= business["image_url"] %>" alt="<%= business["name"] %>" />
 					<div class="caption">
 						<strong><h3 class="businessName"><%= business["name"] %></h3></strong>
+						<p><%= business["snippet_text"] %></p>
 					</div>
+					<button class="btn btn-lg btn-danger btn-block"><a style="color: inherit;"href="<%=business['url']%>">VISIT THIS <%= query.term.toUpperCase() %></a></button>
 				</div>
 			</div>
 		<%	}); %>

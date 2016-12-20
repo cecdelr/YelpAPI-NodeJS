@@ -1,3 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+
+h1{
+    font-family: 'Noto Sans Bold', sans-serif;
+    font-weight: bold;
+}
+
+#searchBox{
+    width: 500px;
+    margin: 10% auto;
+    background: rgba(255, 189, 170, 0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    padding: 20px;
+}
+
+#searchBox::after {
+  content: "";
+  background-image: url("http://www.iconsdb.com/icons/preview/white/yelp-2-xxl.png");
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  top: 10%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  height: 400px;
+  width: 700px;   
+}
+
 #camps{
 	display: flex; 
 	flex-wrap: wrap;
@@ -12,12 +42,27 @@
 	padding-top: 10px;
 }
 
-footer{
-	height: 25px;
-    background-color: #efefef;
-    bottom:0px;
-    left:0px;
-    right:0px;
-    margin-bottom:0px;
-    text-align: center;
+.jumbotron h1{
+    font-size: 5rem;
+}
+
+/*from: http://stackoverflow.com/questions/21933356/sticky-bootstrap-footer-overlaping-content-of-page*/
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color: #bd1f1f;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+  padding-top: 20px;
 }

@@ -15,4 +15,8 @@
  - Bootstrap (using flex)
 
 ##Screenshots
-Coming soon!
+###Search Screen
+![Search Screen](/screenshots/image1.png)
+
+###Results Screen
+![Results Screen](/screenshots/image2.png)
